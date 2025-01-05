@@ -77,9 +77,9 @@ export function App() {
             <Image className="w-8 h-8 text-blue-500" />
             <h1 className="text-3xl font-bold text-gray-900">Squish</h1>
           </div>
-          <p className="text-gray-600">
+          <h1 className="text-gray-600">
             Compress and convert your images to AVIF, JPEG, JPEG XL, PNG, or WebP
-          </p>
+          </h1>
         </div>
 
         <div className="space-y-6">
