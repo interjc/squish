@@ -7,6 +7,7 @@ import { DownloadAll } from './components/DownloadAll';
 import { useImageQueue } from './hooks/useImageQueue';
 import { DEFAULT_QUALITY_SETTINGS } from './utils/formatDefaults';
 import type { ImageFile, OutputType, CompressionOptions as CompressionOptionsType } from './types';
+import { Analytics } from '@vercel/analytics/react'; //vercel analytics
 
 export function App() {
   const [images, setImages] = useState<ImageFile[]>([]);
@@ -112,6 +113,7 @@ export function App() {
           )}
         </div>
       </div>
+      <Analytics />
     </div>
   );
 }
