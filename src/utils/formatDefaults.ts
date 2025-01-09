@@ -5,6 +5,7 @@ export const DEFAULT_QUALITY_SETTINGS: FormatQualitySettings = {
   jpeg: 75,
   jxl: 75,
   webp: 75,
+  gif: 75,
 };
 
 export function getDefaultQualityForFormat(format: keyof FormatQualitySettings): number {

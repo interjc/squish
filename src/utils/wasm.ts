@@ -5,7 +5,7 @@ const wasmInitialized = new Map<OutputType, boolean>();
 
 export async function ensureWasmLoaded(format: OutputType): Promise<void> {
   if (wasmInitialized.get(format)) return;
-  
+
   try {
     switch (format) {
       case 'avif':

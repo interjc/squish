@@ -10,13 +10,14 @@ export interface ImageFile {
   blob?: Blob;
 }
 
-export type OutputType = 'avif' | 'jpeg' | 'jxl' | 'png' | 'webp';
+export type OutputType = 'avif' | 'jpeg' | 'jxl' | 'png' | 'webp' | 'gif';
 
 export interface FormatQualitySettings {
   avif: number;
   jpeg: number;
   jxl: number;
   webp: number;
+  gif: number;
 }
 
 export interface CompressionOptions {

@@ -20,8 +20,8 @@ export function CompressionOptions({
         <label className="block text-sm font-medium text-gray-700 mb-2">
           Output Format
         </label>
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
-          {(['avif', 'jpeg', 'jxl', 'png', 'webp'] as const).map((format) => (
+        <div className="grid grid-cols-2 sm:grid-cols-6 gap-2">
+          {(['avif', 'jpeg', 'gif', 'jxl', 'png', 'webp'] as const).map((format) => (
             <button
               key={format}
               className={`px-4 py-2 rounded-md text-sm font-medium uppercase ${
@@ -35,6 +35,11 @@ export function CompressionOptions({
             </button>
           ))}
         </div>
+        {outputType === 'gif' && (
+          <p className="mt-2 text-sm text-amber-600">
+            Note: Animated GIFs will be converted to static images during compression
+          </p>
+        )}
       </div>
 
       {outputType !== 'png' && (

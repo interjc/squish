@@ -27,7 +27,7 @@ export function App() {
   const handleFilesDrop = useCallback((newImages: ImageFile[]) => {
     // First add all images to state
     setImages((prev) => [...prev, ...newImages]);
-    
+
     // Use requestAnimationFrame to wait for render to complete
     requestAnimationFrame(() => {
       // Then add to queue after UI has updated
@@ -78,7 +78,7 @@ export function App() {
             <h1 className="text-3xl font-bold text-gray-900">PicMin</h1>
           </div>
           <p className="text-gray-600">
-            Compress and convert your images to AVIF, JPEG, JPEG XL, PNG, or WebP
+            Compress and convert your images to AVIF, JPEG, GIF, JPEG XL, PNG, or WebP
           </p>
         </div>
 
@@ -96,9 +96,9 @@ export function App() {
             <DownloadAll onDownloadAll={handleDownloadAll} count={completedImages} />
           )}
 
-          <ImageList 
-            images={images} 
-            onRemove={handleRemoveImage} 
+          <ImageList
+            images={images}
+            onRemove={handleRemoveImage}
           />
 
           {images.length > 0 && (
